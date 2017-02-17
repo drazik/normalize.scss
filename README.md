@@ -50,7 +50,7 @@ const sass = require("gulp-sass");
 gulp.task("styles", () => {
     return gulp.src("scss/*.scss")
         .pipe(sass({
-            includePaths: require("normalize.scss").includePaths
+            includePaths: require("@drazik/normalize.scss").includePaths
         }))
         .pipe(gulp.dest("css"));
 });
