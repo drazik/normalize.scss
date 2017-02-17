@@ -2,7 +2,7 @@
 
 This repository is just a wrapper around
 [normalize.css](https://github.com/necolas/normalize.css), a project by
-(Nicolas Gallagher)(https://github.com/necolas).
+[Nicolas Gallagher](https://github.com/necolas).
 
 ** I am NOT the author of normalize.css, Nicolas Gallagher IS. **
 
