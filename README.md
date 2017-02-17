@@ -32,7 +32,7 @@ CSS.
 ### Install
 
 ```
-npm install --save normalize.scss
+npm install --save @drazik/normalize.scss
 ```
 
 ### Update your node-sass configuration

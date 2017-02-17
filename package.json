@@ -1,0 +1,24 @@
+{
+  "name": "@drazik/normalize.scss",
+  "version": "1.0.0",
+  "description": "A wrapper around normalize.css to make it importable easily with Sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drazik/normalize.scss.git"
+  },
+  "keywords": [
+    "normalize",
+    "scss",
+    "sass"
+  ],
+  "author": "Cyrille Perois <cperois@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drazik/normalize.scss/issues"
+  },
+  "homepage": "https://github.com/drazik/normalize.scss#readme"
+}
