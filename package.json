@@ -1,6 +1,6 @@
 {
   "name": "@drazik/normalize.scss",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "description": "A wrapper around normalize.css to make it importable easily with Sass",
   "main": "index.js",
   "scripts": {
