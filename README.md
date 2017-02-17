@@ -25,7 +25,9 @@ The goal here is clear :
 * Follow normalize.css release versions
 
 This way, you can use normalize.css in your Sass code like you would do in plain
-CSS.
+CSS. Every release tagged in normalize.css repository is also tagged in this
+one. It means that no matter the version you use, you can find the equivalent
+Sassy version here.
 
 ## How to use
 
