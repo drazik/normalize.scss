@@ -1,5 +1,7 @@
 # normalize.scss
 
+[![npm version](https://badge.fury.io/js/%40drazik%2Fnormalize.scss.svg)](https://badge.fury.io/js/%40drazik%2Fnormalize.scss)
+
 This repository is just a wrapper around
 [normalize.css](https://github.com/necolas/normalize.css), a project by
 [Nicolas Gallagher](https://github.com/necolas).
