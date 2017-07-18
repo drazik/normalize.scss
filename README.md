@@ -1,3 +1,7 @@
+*DEPRECATED*
+
+This project is deprecated. You should use the original [normalize.css](https://github.com/necolas/normalize.css) and [node-sass' includePaths](https://github.com/sass/node-sass#includepaths) to get the same result.
+
 # normalize.scss
 
 [![npm version](https://badge.fury.io/js/%40drazik%2Fnormalize.scss.svg)](https://badge.fury.io/js/%40drazik%2Fnormalize.scss)
