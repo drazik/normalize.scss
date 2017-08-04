@@ -1,80 +1,33 @@
-*DEPRECATED*
+# Deprecated
 
-This project is deprecated. You should use the original [normalize.css](https://github.com/necolas/normalize.css) and [node-sass' includePaths](https://github.com/sass/node-sass#includepaths) to get the same result.
+This project is deprecated. Its intent was to make
+[normalize.css](https://github.com/necolas/normalize.css) easily importable in
+Sass/SCSS code. But it is possible without having to hack around normalize.css.
 
-# normalize.scss
+To achieve this, you must use the `includePaths` option of your libsass
+implementation (for example,
+[node-sass' includePaths](https://github.com/sass/node-sass#includepaths)).
 
-[![npm version](https://badge.fury.io/js/%40drazik%2Fnormalize.scss.svg)](https://badge.fury.io/js/%40drazik%2Fnormalize.scss)
-
-This repository is just a wrapper around
-[normalize.css](https://github.com/necolas/normalize.css), a project by
-[Nicolas Gallagher](https://github.com/necolas).
-
-** I am NOT the author of normalize.css, Nicolas Gallagher IS. **
-
-## Why a wrapper ?
-
-Because normalize.css is awesome, but you can't inline `@import` it in your Sass
-project. This is the only goal of this wrapper : make normalize.css
-"`@import`able" in your Sass code using LibSass.
-
-## I can see a lot of other wrappers around here...
-
-Yes, but the majority doesn't address the `@import` issue. And others don't
-follow normalize.css' semantic versioning, which can lead to some issues.
-
-## The intent of this wrapper
-
-The goal here is clear :
-
-* Make normalize.css compatible with Sass inline `@import`
-* Follow normalize.css release versions
-
-This way, you can use normalize.css in your Sass code like you would do in plain
-CSS. Every release tagged in normalize.css repository is also tagged in this
-one. It means that no matter the version you use, you can find the equivalent
-Sassy version here.
-
-## How to use
-
-### Install
-
-```
-npm install --save @drazik/normalize.scss
-```
-
-### Update your node-sass configuration
-
-Add the path to the package to the `includePaths` parameter of node-sass.
-
-For example, if you use gulp and gulp-sass :
+Using [gulp-sass](https://github.com/dlmanning/gulp-sass), here is how to
+achieve this :
 
 ```js
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 
 gulp.task("styles", () => {
-    return gulp.src("scss/*.scss")
-        .pipe(sass({
-            includePaths: require("@drazik/normalize.scss").includePaths
-        }))
-        .pipe(gulp.dest("css"));
+  return gulp.src("path/to/style.scss")
+    .pipe(sass({
+      includePaths: ["node_modules"]
+    }))
+    .pipe(gulp.dest("destFolder"));
 });
 ```
 
-### Import it !
+This way, after installing
+[normalize.css](https://github.com/necolas/normalize.css) with
+`npm install --save normalize.css`, you can import it in your code like this :
 
-In your SCSS code :
-
-```css
-@import "normalize";
+```scss
+@import "normalize.css/normalize"; // <- this is the path from `node_modules`
 ```
-
-## Contribute
-
-You can submit issues and pull requests, but remember that this is just a
-wrapper around the original project :
-[normalize.css](https://github.com/necolas/normalize.css). So, if you have an
-issue with the CSS itself or if you want to add some features, you must refer to
-[normalize.css issues](https://github.com/necolas/normalize.css/issues) and
-submit a PR to this original repository, not here.
